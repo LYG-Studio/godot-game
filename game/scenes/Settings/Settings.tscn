@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://djcidxj1x2j43"]
+
+[ext_resource type="Script" uid="uid://bh540gki07jkv" path="res://scenes/Settings/volume.gd" id="1_q2mcd"]
+[ext_resource type="AudioStream" uid="uid://kxwli2kxi2wp" path="res://assets/music/time_for_adventure.mp3" id="2_k2lax"]
+[ext_resource type="Script" uid="uid://dhb7gdfyytv3a" path="res://scenes/Settings/resolutions.gd" id="2_nll1c"]
+
+[node name="Settings" type="Control" unique_id=143830073]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1260728725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=134392060]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2118585976]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=2121275411]
+layout_mode = 2
+script = ExtResource("1_q2mcd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1702674801]
+layout_mode = 2
+
+[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=377092949]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=91955746]
+layout_mode = 2
+text = "Mute"
+
+[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=472400216]
+layout_mode = 2
+selected = 2
+item_count = 3
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+script = ExtResource("2_nll1c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1250522467]
+stream = ExtResource("2_k2lax")
+autoplay = true
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="MarginContainer/VBoxContainer/Volume" method="_on_volume_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer/Mute" to="MarginContainer/VBoxContainer/Volume" method="_on_mute_toggled"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/Resolutions" to="MarginContainer/VBoxContainer/Resolutions" method="_on_item_selected"]

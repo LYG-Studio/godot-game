@@ -1,2 +1,2 @@
 # godot-game-boilerplate
-a project with basic features I can reuse on any game
+a project for a game

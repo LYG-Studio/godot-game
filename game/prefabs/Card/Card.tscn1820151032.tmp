@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3kk37d05w8iu"]
+
+[ext_resource type="Script" uid="uid://cebiuypti1ra" path="res://prefabs/Card/card.gd" id="1_lrgw6"]
+[ext_resource type="Resource" uid="uid://vkskt7omoi67" path="res://resources/Cards/Copas.tres" id="2_hdxfl"]
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_lrgw6")
+card_type = ExtResource("2_hdxfl")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "IOIOO"

@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://b3j3xbhcuetq5"]
+[gd_scene load_steps=3 format=3 uid="uid://b3j3xbhcuetq5"]
 
 [ext_resource type="Script" uid="uid://3y1f8ia313tc" path="res://scenes/Main/main.gd" id="1_owiiy"]
 [ext_resource type="PackedScene" uid="uid://d0p75dpkkl4id" path="res://scenes/TitleScreen/TitleScreen.tscn" id="2_owiiy"]
 
-[node name="Node" type="Node" unique_id=2198147]
+[node name="Node" type="Node"]
 script = ExtResource("1_owiiy")
 
-[node name="TitleScreen" parent="." unique_id=2075687139 instance=ExtResource("2_owiiy")]
+[node name="TitleScreen" parent="." instance=ExtResource("2_owiiy")]

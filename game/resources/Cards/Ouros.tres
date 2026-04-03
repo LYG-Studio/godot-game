@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://do2s0c8hk8j5e"]
+
+[ext_resource type="Script" uid="uid://cwfoo1xgmlmnk" path="res://resources/Cards/CopasEffect.gd" id="1_bbyj1"]
+[ext_resource type="Script" uid="uid://cxp4xyotge5ib" path="res://resources/Cards/CardResource.gd" id="2_2fuog"]
+
+[resource]
+script = ExtResource("2_2fuog")
+id = "213124"
+name = "Ouros"
+value = 1
+type = 1
+effect = ExtResource("1_bbyj1")
+metadata/_custom_type_script = "uid://cxp4xyotge5ib"

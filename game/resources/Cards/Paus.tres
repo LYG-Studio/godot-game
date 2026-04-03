@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://x3lsasvjgimx"]
+
+[ext_resource type="Script" uid="uid://cwfoo1xgmlmnk" path="res://resources/Cards/CopasEffect.gd" id="1_edmg7"]
+[ext_resource type="Script" uid="uid://cxp4xyotge5ib" path="res://resources/Cards/CardResource.gd" id="2_xuhxk"]
+
+[resource]
+script = ExtResource("2_xuhxk")
+id = "3211"
+name = "Paus"
+value = 1
+type = 2
+effect = ExtResource("1_edmg7")
+metadata/_custom_type_script = "uid://cxp4xyotge5ib"

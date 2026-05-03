@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://djcidxj1x2j43"]
+[gd_scene load_steps=5 format=3 uid="uid://djcidxj1x2j43"]
 
 [ext_resource type="Script" uid="uid://cqx168dt7i2oc" path="res://scenes/Settings/settings.gd" id="1_f3efy"]
 [ext_resource type="Script" uid="uid://bh540gki07jkv" path="res://scenes/Settings/volume.gd" id="1_q2mcd"]
 [ext_resource type="AudioStream" uid="uid://kxwli2kxi2wp" path="res://assets/music/time_for_adventure.mp3" id="2_k2lax"]
 [ext_resource type="Script" uid="uid://dhb7gdfyytv3a" path="res://scenes/Settings/resolutions.gd" id="2_nll1c"]
 
-[node name="Settings" type="Control" unique_id=143830073]
+[node name="Settings" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f3efy")
 
-[node name="Panel" type="Panel" parent="." unique_id=887019654]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -28,16 +28,16 @@ offset_bottom = 163.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Panel" unique_id=1311486646]
+[node name="ColorRect" type="ColorRect" parent="Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.37111902, 0.37111908, 0.37111893, 1)
+color = Color(0.371119, 0.371119, 0.371119, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1260728725]
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -51,33 +51,33 @@ offset_bottom = 127.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=134392060]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=2118585976]
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Music volume"
 
-[node name="Volume" type="HSlider" parent="Panel/MarginContainer/VBoxContainer" unique_id=2121275411]
+[node name="Volume" type="HSlider" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 max_value = 1.0
 step = 0.05
 value = 1.0
 script = ExtResource("1_q2mcd")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1702674801]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Mute" type="CheckBox" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=377092949]
+[node name="Mute" type="CheckBox" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Mute"
 
-[node name="Label3" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1197602072]
+[node name="Label3" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Resolution"
 
-[node name="Resolutions" type="OptionButton" parent="Panel/MarginContainer/VBoxContainer" unique_id=472400216]
+[node name="Resolutions" type="OptionButton" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 selected = 2
 item_count = 3
@@ -89,15 +89,15 @@ popup/item_2/text = "1280x720"
 popup/item_2/id = 2
 script = ExtResource("2_nll1c")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=2128587150]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Fullscreen" type="CheckBox" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=419327876]
+[node name="Fullscreen" type="CheckBox" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 text = "Fullscreen"
 script = ExtResource("2_nll1c")
 
-[node name="Close" type="Button" parent="Panel" unique_id=1479767220]
+[node name="Close" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -109,7 +109,7 @@ offset_bottom = 40.0
 grow_horizontal = 0
 text = "X"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1250522467]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_k2lax")
 autoplay = true
 parameters/looping = true

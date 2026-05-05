@@ -1,13 +1,47 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3kk37d05w8iu"]
+[gd_scene load_steps=5 format=3 uid="uid://d3kk37d05w8iu"]
 
 [ext_resource type="Script" uid="uid://cebiuypti1ra" path="res://prefabs/Card/card.gd" id="1_lrgw6"]
 [ext_resource type="Resource" uid="uid://vkskt7omoi67" path="res://resources/Cards/Copas.tres" id="2_hdxfl"]
+[ext_resource type="Texture2D" uid="uid://cx1ae0hmqac2p" path="res://assets/card.png" id="3_tdy70"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdxfl"]
+size = Vector2(168, 153.5)
 
 [node name="Card" type="Node2D"]
 script = ExtResource("1_lrgw6")
 card_type = ExtResource("2_hdxfl")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "IOIOO"
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.24, 0.152727)
+texture = ExtResource("3_tdy70")
+centered = false
+region_rect = Rect2(16, 16, 16, 16)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(84, 77.25)
+shape = SubResource("RectangleShape2D_hdxfl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 18.0
+offset_top = 95.0
+offset_right = 152.0
+offset_bottom = 145.0
+
+[node name="Name" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Copas"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Type" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Arma"
+
+[node name="Value" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "10"
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

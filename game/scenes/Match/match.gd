@@ -1,5 +1,7 @@
 extends Node2D
 
+const CARD = preload("res://prefabs/Card/Card.tscn")
+
 # receives the deck the match will use
 const DECK = [
 	{"type": "Copas", "value": 1}, # should we add the ID and card image/animations?
@@ -9,6 +11,9 @@ const DECK = [
 	{"type": "Copas", "value": 5},
 	{"type": "Copas", "value": 6},
 	{"type": "Copas", "value": 7},
+	{"type": "Copas", "value": 8},
+	{"type": "Copas", "value": 9},
+	{"type": "Copas", "value": 10},
 ] # leaving it hardcoded for now to get the match rules done
 
 # max health could be received as well if we plan changing it from match to match
@@ -16,6 +21,9 @@ const MAX_HEALTH = 20 # leaving it hardcoded for now
 const ROOM_SIZE = 4
 
 var currentHealth = MAX_HEALTH
+var deckPile = DECK
+var discardPile = []
+var activeCards = []
 
 # controls all the general rules of a match:
 # - 4 cards make a room

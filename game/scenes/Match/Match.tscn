@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ctxnvyi4k7xsf" path="res://scenes/Match/match.gd" id="1_r4s8i"]
 [ext_resource type="Script" uid="uid://dyirajl0fkxoc" path="res://scenes/Match/CardManager.gd" id="2_1psl4"]
-[ext_resource type="PackedScene" uid="uid://d3kk37d05w8iu" path="res://prefabs/Card/Card.tscn" id="3_gtor4"]
 [ext_resource type="PackedScene" uid="uid://db0jt28td6ge3" path="res://prefabs/CardSlot/CardSlot.tscn" id="4_gtor4"]
+[ext_resource type="Script" uid="uid://8ksyomeeycyl" path="res://scenes/Match/PlayerHand.gd" id="4_u2nqx"]
 
 [node name="Match" type="Node2D"]
 script = ExtResource("1_r4s8i")
@@ -11,14 +11,11 @@ script = ExtResource("1_r4s8i")
 [node name="CardManager" type="Node2D" parent="."]
 script = ExtResource("2_1psl4")
 
-[node name="Card" parent="CardManager" instance=ExtResource("3_gtor4")]
-position = Vector2(276, 265)
-
-[node name="Card2" parent="CardManager" instance=ExtResource("3_gtor4")]
-position = Vector2(676, 237)
-
 [node name="CardSlot" parent="." instance=ExtResource("4_gtor4")]
-position = Vector2(290, 523)
+position = Vector2(132, 168)
 
 [node name="CardSlot2" parent="." instance=ExtResource("4_gtor4")]
-position = Vector2(543, 526)
+position = Vector2(335, 168)
+
+[node name="PlayerHand" type="Node2D" parent="."]
+script = ExtResource("4_u2nqx")

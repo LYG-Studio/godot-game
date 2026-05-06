@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3j3xbhcuetq5"]
+[gd_scene load_steps=4 format=3 uid="uid://b3j3xbhcuetq5"]
 
 [ext_resource type="Script" uid="uid://3y1f8ia313tc" path="res://scenes/Main/main.gd" id="1_owiiy"]
 [ext_resource type="PackedScene" uid="uid://d0p75dpkkl4id" path="res://scenes/TitleScreen/TitleScreen.tscn" id="2_owiiy"]
+[ext_resource type="PackedScene" uid="uid://d2ekpb50n3u8u" path="res://scenes/Match/Match.tscn" id="3_8llo8"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_owiiy")
 
 [node name="TitleScreen" parent="." instance=ExtResource("2_owiiy")]
+visible = false
+
+[node name="Match" parent="." instance=ExtResource("3_8llo8")]

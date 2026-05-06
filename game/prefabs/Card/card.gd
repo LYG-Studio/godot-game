@@ -26,6 +26,6 @@ func _ready() -> void:
 		
 	self.card_type.effect.on_draw()
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		print(event)
+#func _input(event: InputEvent) -> void:
+	#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		#print(event)

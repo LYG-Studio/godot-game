@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3kk37d05w8iu"]
+[gd_scene load_steps=4 format=3 uid="uid://d3kk37d05w8iu"]
 
 [ext_resource type="Script" uid="uid://cebiuypti1ra" path="res://prefabs/Card/card.gd" id="1_lrgw6"]
-[ext_resource type="Resource" uid="uid://vkskt7omoi67" path="res://resources/Cards/Copas.tres" id="2_hdxfl"]
 [ext_resource type="Texture2D" uid="uid://cx1ae0hmqac2p" path="res://assets/card.png" id="3_tdy70"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hdxfl"]
@@ -9,7 +8,6 @@ size = Vector2(168, 153.5)
 
 [node name="Card" type="Node2D"]
 script = ExtResource("1_lrgw6")
-card_type = ExtResource("2_hdxfl")
 
 [node name="CardImage" type="Sprite2D" parent="."]
 scale = Vector2(0.24, 0.152727)
@@ -44,3 +42,5 @@ layout_mode = 2
 text = "10"
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
